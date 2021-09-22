@@ -1,7 +1,7 @@
 /* MOBILE 320-600px */
 
 html {
-    background-color: green;
+    background-color: rgb(37, 154, 7);
 }
 
 body {
@@ -24,6 +24,8 @@ header {
 
 #logo {
     width: 50%;
+    max-width: 500px;
+    max-height: 100px;
 }
 
 #logo img {
@@ -38,7 +40,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-size: 10pt;
+    font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(37, 154, 7);
@@ -70,15 +72,18 @@ main {
     align-items: center;
 }
 
-.first-article img {
-    width: 223px;
-    height: 397px;
+.img-container1 {
+    width: 200px;
+}
+
+.img-container1 img {
+    width: 100%;
 }
 
 .first-article p {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    width: 300px;
+    width: 250px;
 }
 
 .animals {
@@ -98,9 +103,12 @@ main {
     align-items: center;
 }
 
-.second-article img {
+.img-container2 {
     width: 275px;
-    height: 275px;
+}
+
+.img-container2 img {
+    width: 100%;
 }
 
 .second-article p {
@@ -126,13 +134,8 @@ main {
         justify-content: space-evenly;
     }
 
-    .first-article img {
-        width: 290px;
-        height: 516px;
-    }
-
-    .first-article p {
-        width: 200px;
+    .img-container1 {
+        width: 275px;
     }
 
     .animals {
@@ -144,9 +147,8 @@ main {
         justify-content: space-evenly;
     }
 
-    .second-article img {
+    .img-container2 {
         width: 357px;
-        height: 357px;
     }
 
     .second-article p {
@@ -157,11 +159,6 @@ main {
 /* DESKTOP (801px+) */
 
 @media screen and (min-width: 801px) {
-
-    #logo {
-        max-width: 500px;
-        max-height: 100px;
-    }
 
     nav a {
         font-size: 18pt;
@@ -177,13 +174,17 @@ main {
         height: 525px;
     }
 
-    .first-article img {
-        width: 247px;
-        height: 436px;
+    .first-article {
+        height: 400px;
+        align-items: center;
+    }
+
+    .img-container1 {
+        width: 180px;
     }
 
     .first-article p {
-        width: 100px;
+        width: 150px;
     }
     
     .animals {
@@ -195,9 +196,8 @@ main {
         flex-direction: column;
     }
 
-    .second-article img {
+    .img-container2 {
         width: 315px;
-        height: 315px;
     }
 
     .second-article p {
