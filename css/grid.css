@@ -1,0 +1,248 @@
+/* SMALLER DEVICES 320-600px */
+
+body {
+    gap: 40px;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: 50px 1fr 200px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* HEADER */
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    justify-items: center;
+    align-items: end;  
+}
+
+#logo {
+    width: 100%;
+}
+
+header a {
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN */
+
+main {
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "news"
+    "featured-products";
+    justify-content: center;
+}
+
+.news {
+    background-color: dodgerblue;
+    border: 5px solid lightskyblue;
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.news h4 {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.news img {
+    width: 100%;
+    max-width: 180px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.news p {
+    font-size: 10pt;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr 4fr 4fr;
+    grid-row-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.featured-products h4 {
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.product-container {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: center;
+    justify-items: center;
+}
+
+.product-container p , a {
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.product-container img {
+    height: 225px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: dodgerblue;
+    border: 5px solid lightskyblue;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 175px;
+    grid-template-areas:
+    ".shop-links .corporate-info";
+    justify-items: center;
+    color: white;
+}
+
+.shop-links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "h5"
+    "a"
+    "a"
+    "a"
+    "a";
+    align-items: center;
+}
+
+.shop-links a {
+    font-size: 10pt;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.corporate-links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "h5"
+    "a"
+    "a"
+    "a"
+    "a";
+    align-items: center;
+}
+
+.corporate-links a {
+    font-size: 10pt;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* LARGER DEVICES 601px+ */
+
+@media screen and (min-width: 601px) {
+
+    body {
+        grid-template-rows: 75px 1fr 200px;
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-areas:
+        ". header ."
+        ". main ."
+        ". footer .";
+        justify-content: center;
+    }
+
+    /* HEADER */
+
+    header {
+        grid-area: header;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #logo {
+        width: 85%
+    }
+
+    header a {
+        font-size: 12pt;
+    }
+    
+    /* MAIN */
+
+
+    main {
+        grid-area: main;
+        grid-template-rows: 140px 1fr;
+    }
+
+    .news {
+        grid-template-rows: 50px 50px;
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .news img {
+        width: 100%;
+        max-width: 90px;
+    }
+
+    .news p {
+        font-size: 10pt;
+        width: 95%;
+    }
+
+    .featured-products {
+        grid-template-rows: 1fr 4fr 4fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "h4 h4";
+        justify-items: stretch;
+        
+    }
+
+    .featured-products h4 {
+        grid-area: h4;
+    }
+
+    .product-container {
+        grid-column: auto;
+        grid-row: auto;
+    } 
+
+    /* FOOTER */
+
+    footer {
+        grid-area: footer;
+    }
+}
